@@ -1,0 +1,54 @@
+# TCP & UDP
+
+### Communication between Processes
+
+To build modern networked applications, the two most important things required are:
+
+1. Direct communication between applications or processes
+2. Reliable network communication.
+
+Limitation of the Internet Protocol: It can only provide communication between two hosts or devices which are on the same local network or different local networks. But that is the extent of the communication through IP: between hosts only. 
+
+For building networked applications we need communication between applications or processes running on two different hosts or potentially the same host.
+
+#### Multiplexing and Demultiplexing
+
+All the different networked applications running on a device can be thought of as different channels of communication on a host. All these applications want to be able to send and receive data at the same time. But with IP addresses, we only have a single channel of communication between hosts. So we need to be able to transmit these multiple data inputs from different communication channels on a host, over a single communication channel between hosts and then when it arrives at the other end we need to be able to seperate them again.
+
+Multiplexing is the concept of transmitting multiple signals over a single communication channel. Demultiplexing is the reverse process of breaking down a complex signal made up of different signals into its consituent parts.
+
+Multiplexing and demultiplexing at the transport layer is done through the use of network ports.
+
+#### Network Ports
+
+There are multiple networked applications running on a single host. A port is a unique identifier for a particular application or process running on a host. These ports are identified with an integer within the range 0-65535.
+
+**0 to 1023** are well known ports. They are assigned to the most used network processes e.g. HTTP is port 80, FTP is port 20, SMTP is port 25.
+
+**1024 to 49151** are registered ports allocated to private companies like Microsoft, IBM etc. for providing some specific services. They are also used as ephemeral ports on some operating systems.
+
+**49152-65535** are known as dynamic ports or private ports. They cannot be registered for a specific use. They are usually used for custom built processes or as ephemeral ports. 
+
+- Processes or applications running on servers are usually allocated a port in the well known range e.g. a web server is usually assigned the port 80
+- Processes or applications running on client systems dont use ports in the well known range. They are allocate a port in the dynamic range.
+- **The source and destination ports are included in the headers for Transport Layer PDUs.** This way a system receiving a complex signal made up of HTTP request and other types of messages can segregate HTTP requests by looking at the destination ports. If the destination port is 80, then it knows to send it to the web server that accepts HTTP requests and responds with an HTTP response.
+- **End to end communication** between specific processes or application on different machines and different local networks is made possible through the combination of IP address and port numbers. The source and destination IP addresses identify the specific hosts while the source and destination ports identify the processes or applications running on those hosts. This combination of IP address and port is also reffered to as a **socket**.
+
+- **UNIX Socket**: a way of communication between local processes that are running on the same system
+
+- **Internet Sockets**: a way of communication between processes across a network.
+
+**socket** is an end point for interprocess communication defined by an IP address-port pair. 
+
+**Connection-Oriented and Connectionless Network Communication**
+
+In a **connectionless** system a single socket object identified by the IP address of the host and the port allocated to a specific process would listen for incoming messages directed to that specific IP/Port pair. These messages could be coming from any source, at any time and in any order. This system would simply respond to any incoming messages as they arrive.
+
+
+
+
+## Have a clear understanding of the TCP and UDP protocols, their similarities and differences
+
+## Have a broad understanding of flow control and congestion avoidance
+
+## Have a broad understanding of the three-way handshake and its purpose
