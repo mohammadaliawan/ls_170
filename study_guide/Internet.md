@@ -55,19 +55,19 @@ A network's overall latency is determined by multiple types of delays that occur
 These delays are:
 1. Propagation delay: is the time it takes for data to travel from one point to another over a network and is determined by distance the data has to travel and the speed with which it can travel which in turn is based on the medium of transfer. So propagation delay is the distance divided by the speed of travel.
 
-2. Transmission delay: The journey of data from a certain point in the network to another point in a network is usually not direct. Instead data to transmitted over several nodes in the network. These nodes are routers that process the data and transmit it to the next node/router along the path until it reaches its final destination. Transmision delay is a measure of the time it takes for data to traverse all these nodes/links along the path.
+2. Transmission delay: The journey of data from a certain point in the network to another point in a network is usually not direct. Instead data has to be transmitted over several nodes/links in the network. These nodes are routers that process the data and transmit it to the next node/router along the path until it reaches its final destination. Transmision delay is a measure of the time it takes for data to traverse all these nodes/links along the path.
 
 3. Processing delay: Data is processed at each node along the path to the destination point. Processing delay measures the time it takes for data to be processed at each node along the path.
 
 4. Queuing delay: Network devices have certain limits on the amount of data that they can process at one time. So if the amount of data is more than its capacity, it queues the data. The amount of time data spends in queues is the queuing delay.
 
-5. Last-mile latency: is the time it takes for a signal to travel from an ISP's network to the final destination network. Most of the transmission, processing and queuing delay occur near these end points of the network i.e. at the network edge. At the network edge network hops are more frequent and shorter which increases the transmission, processing and queuing delays.
+5. Last-mile latency: is the time it takes for a signal to travel from an ISP's network to the final destination network. Most of the transmission, processing and queuing delays occur near these end points of the network i.e. at the network edge. At the network edge network hops are more frequent and shorter which increases the transmission, processing and queuing delays.
 
 6. RTT: Round-trip time: The total time it takes to send a signal over the network and to recieve a response back.
 
-Bandwidth bottleneck:
+Bandwidth bottleneck:A point in the network where the bandwidth changes from high to low is called a bandwidth bottle neck. 
 
-
+Bandwidth does not remain the same across the network. There will be points where the bandwidth is very high (usually in the core network) and some points where the bandwidth is relatively low.
 
 ### Have a basic understanding of how lower level protocols operate
 

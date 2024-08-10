@@ -13,6 +13,8 @@ For building networked applications we need communication between applications o
 
 #### Multiplexing and Demultiplexing
 
+We have multiple channels of communication on a host but only a single channel between hosts.
+
 All the different networked applications running on a device can be thought of as different channels of communication on a host. All these applications want to be able to send and receive data at the same time. But with IP addresses, we only have a single channel of communication between hosts. So we need to be able to transmit these multiple data inputs from different communication channels on a host, over a single communication channel between hosts and then when it arrives at the other end we need to be able to seperate them again.
 
 Multiplexing is the concept of transmitting multiple signals over a single communication channel. Demultiplexing is the reverse process of breaking down a complex signal made up of different signals into its consituent parts.
@@ -44,8 +46,30 @@ There are multiple networked applications running on a single host. A port is a 
 
 In a **connectionless** system a single socket object identified by the IP address of the host and the port allocated to a specific process would listen for incoming messages directed to that specific IP/Port pair. These messages could be coming from any source, at any time and in any order. This system would simply respond to any incoming messages as they arrive.
 
+In a **Connection-oriented** system we would still have a single socket object identified by the host IP listening on a specific port, but whenever a message comes, a new socket object would be instantiated identified by the source IP/port pair as well as the destination IP/port pair called a four tuple. This socket would be a dedicated socket for any messages that match this four tuple. Any message that dont match this four tuple would still be processed by the original socket identified by the destination IP/port pair which would instantiate a new socket object for this new connection.
 
+Having a dedicated connection for specific processes on two different hosts communicating across the internet, allows us to establish specific rules of network communication between those processes.These additional rules add to the network reliability.
 
+### Network Reliability
+
+The network upto and including Internet Protocol is inherently an unreliable communicatio channel.
+
+To build reliable networked applications we as developers need a reliable communication channel through which we can send our data.
+
+To send data reliably over an unreliable communication channel, we need a protocol or set of rules that can ensure that the data that is sent is received at both end points and in the correct order.
+
+#### Characterisitics of a reliable network connection
+
+1. In-order delivery
+2. Error Detection
+3. Handling data loss
+4. Handling duplication
+
+#### Pipelining for performance
+
+We need to find a balance between reliability and performance. Pipelining 
+
+The implementation of TCP addresses this trade-off.
 
 ## Have a clear understanding of the TCP and UDP protocols, their similarities and differences
 
