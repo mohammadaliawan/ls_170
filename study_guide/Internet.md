@@ -104,7 +104,7 @@ The different parts of the Ethernet Frame are:
 5. **Data Payload:** 42 to 1497 bytes, the complete PDU from the layer above e.g. an IP Packet.
 6. **Frame Check Sequence:** 4 bytes, The device that creates the frame, generates a checksum from the frame data using an algorithm. The receiving devices uses the same algorithm to generate a checksum from the frame data it receives. It compares both, and if they are not the same that particular frame is dropped. Ethernet does not retransmit any dropped frames. It is upto the higher level protocols to manage lost data.
 
-**Interframe gap(IFG)** is a small gap between transmission of two ethernet frames. This is specified by network device that creates the ethernet frame. It depends on the capability of the ethernet connection and leads the transmission delay part of the overall latency of the network connection.
+**Interframe gap(IFG)** is a small gap between transmission of two ethernet frames. This is specified by network device that creates the ethernet frame. It depends on the capability of the ethernet connection and leads to the transmission delay part of the overall latency of the network connection.
 
 ##### MAC Addresses
 
@@ -112,7 +112,7 @@ The different parts of the Ethernet Frame are:
 - It should be unique and usually does not change. Specific to a physical device
 - MAC addresses are provided as a series of six two digit hexadecimal numbers.
 - Manufacturers are assigned with a range of these six hexadecimal numbers.
-- Hubs transfer the frame to all the devices connected to its network. Only the devices for the destination MAC address matches accepts the frame.
+- Hubs transfer the frame to all the devices connected to its network. Only the devices for which the destination MAC address matches accepts the frame.
 - Switches send the frame only to that device which has the destination MAC address.
 - A switch keeps an up to date record of the MAC addresses of the devices connected to it called a MAC Address Table. The MAC Address Table contains the MAC addresses as well as the ports of the switch associated with those MAC addresses. So when it receives a frame, it sends it to the correct device by first checking the destination MAC address in the frame header and directing it to the port associated with that MAC address.
 
@@ -164,7 +164,7 @@ IPv6 has a different header structure for Packets and does not perform error che
 
 IP address is a sequence of characters that uniquely identifies a device that is using the Internet Protocol (IP) to communicate with other devices. There are two version of IP addresses. IPv4 addresses are 32 bits in length and divided into four section of 8 bits each while IPv6 address are 128 bits in length and divided into 8 sections of 16 bits each.
 
-### Have an understanding of how DNS works(COME_BACK)
+__________________________________________ ### Have an understanding of how DNS works(COME_BACK)
 
 
 ### Understand the client-server model of web interactions, and the role of HTTP as a protocol within that model
