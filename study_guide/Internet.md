@@ -7,6 +7,8 @@ The internet can be thought of as a global network that connects a large number 
 
 #### Protocols
 
+
+
 There are countless types of devices that need to communicate over the internet. They have different models, makes etc. The way we can make sure that these different types of devices can successfully communicate with each other over the internet, is by defining certain rules for communication that all devices follow. These rules are called protocols i.e. a collection of rules of that control the transfer of data over the network.
 
 #### Layers of the overall network communication system
