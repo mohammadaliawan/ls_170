@@ -5,11 +5,9 @@ LaunchSchool *The internet is a vast network of networks. It is comprised of bot
 
 The internet can be thought of as a global network that connects a large number of Local Area Networks all over the world and allows communication between these networks. The internet consists of the physical network infrastructure (routers, switches, computers/other devices and cables) and the set of rules or protocols that govern how this infrastructure works.
 
-#### Protocols-
+#### Protocols
 
 There are countless types of devices that need to communicate over the internet. They have different models, makes etc. The way we can make sure that these different types of devices can successfully communicate with each other over the internet, is by defining certain rules for communication that all devices follow. These rules are called protocols i.e. a collection of rules of that control the transfer of data over the network.
-
-Hello 1
 
 #### Layers of the overall network communication system
 
@@ -142,8 +140,6 @@ The PDU in the IP Protocol is known as a packet. It consists of a Header and a D
 
 - IP addresses are assigned to devices logically as they join a network. They are not tied to a specific device or host on the network like MAC addresses are.
 - Each local area network has a range of IP addresses available to it. This range of IP addresses is based on a network heirarchy which is the result of splitting the overall network into logical subnetworks with each subnetwork assigned a range of IP addresses.
-
-
 
 **Network Address** is the IP address at the start of a range of IP addresses that are assigned to a local network while the address at the end of the range is defined as the **broadcas**t address.
 
