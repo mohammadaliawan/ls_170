@@ -7,13 +7,15 @@ The internet can be thought of as a global network that connects a large number 
 
 #### Protocols
 
+##### What are Protocols?
+
 There are countless types of devices that need to communicate over the internet. They have different models, makes etc. The way we can make sure that these different types of devices can successfully communicate with each other over the internet, is by defining certain rules for communication that all devices follow. These rules are called protocols i.e. a collection of rules of that control the transfer of data over the network.
 
 #### Layers of the overall network communication system
 
 LaunchSchool *Different types of protocol are concerned with different aspects of network communication. It can be useful to think of these different protocols as operating at particular 'layers' of the network.*
 
-Communication over the internet follows certain rules or protocols. There are numerous protocols that govern different aspects of network communication or the same aspect but for specific cases. Different aspects of network communication are structure of the message, flow and order of the messages. For exampe, TCP and HTTP address different aspects of communication. TCP addresses the rules for transfer of messages between applications while HTTP governs the structure of those messages.
+Communication over the internet follows certain rules or protocols. There are numerous protocols that govern different aspects of network communication or the same aspect but for specific cases. Different aspects of network communication are for example structure of the message, flow and order of the messages etc. For exampe, TCP and HTTP address different aspects of communication. TCP addresses the rules for transfer of messages between applications while HTTP governs the structure of those messages.
 
 These protocols can be grouped based on the aspect of communication they serve. These protocol groups can be thought of as working within specific layers of the network communication system.
 
@@ -31,7 +33,7 @@ The OSI model and the Internet Protocol Suite (TCP/IP model or DoD model) are tw
 
 LaunchSchool *Encapsulation is a means by which protocols at different network layers can work together. Encapsulation is implemented through the use of Protocol Data Units (PDUs). The PDU of a protocol at one layer, becomes the data payload of the PDU of a protocol at a lower layer.*
 
-The overall network communication system of the internet can be modularized and structured into layers where different protocols function at different layers. For this layered system to be truly modular, a particular protocol at one layer should be able to perform its function without having any information about the protocol at the layer above or below. To achieve this, the entire unit of data (called a PDU) of a protocol at one layer is encapsulated into the data payload of the PDU of a protocol at a layer below.
+The overall network communication system of the internet can be modularized and structured into layers where different protocols function at different layers. __For this layered system to be truly modular, a particular protocol at one layer should be able to perform its function without having any information about the protocol at the layer above or below.__ To achieve this, the entire unit of data (called a PDU) of a protocol at one layer is encapsulated into the data payload of the PDU of a protocol at a layer below.
 
 Data encapsulation allows protocols at different layers to work togather without having any information about how lower or higher level protocols are implemented.
 
